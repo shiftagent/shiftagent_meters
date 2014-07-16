@@ -10,7 +10,7 @@ angular.module('shiftagentMeters.directives', []).
     };
   }])
 
-  .directive('saMeter', ['syncData', '$rootScope', function(syncData, $rootScope) {
+  .directive('saMeter', ['syncData', '$rootScope', '$timeout', function(syncData, $rootScope, $timeout) {
       return {
         scope: {
           meter: '=saMeter',
@@ -18,8 +18,26 @@ angular.module('shiftagentMeters.directives', []).
         },
         templateUrl: 'partials/saMeter.html',
         link: function(scope, elem, attrs) {
+          var flashTimeout;
+
           scope.endpoint = syncData('meters/' +  scope.meterId);
           scope.dataPoints = scope.endpoint.$child('dataPoints');
+
+          scope.$watch(function() {
+            return _.size(scope.meter.dataPoints);
+          }, function() {
+            if (!_.isUndefined(flashTimeout)) {
+              $timeout.cancel(flashTimeout);
+            };
+
+            $(elem).addClass('flash');
+
+            flashTimeout = $timeout(function() {
+              $(elem).removeClass('flash');
+            }, 5000);
+
+          });
+
           scope.subject = undefined;
           syncData('users/' + scope.meter.subject).$bind(scope, 'subject');
 

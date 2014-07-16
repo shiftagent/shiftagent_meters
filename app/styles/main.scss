@@ -74,6 +74,23 @@ fieldset {
   padding: 25px;
 }
 
+@keyframes flash_background {
+  0%   {background-color: $shiftGray;}
+  50%  {background-color: lighten($shiftBlue, 10%);}
+  100% {background-color: $shiftGray;}
+}
+
+@-webkit-keyframes flash_background { /* Safari and Chrome */
+  0%   {background-color: $shiftGray;}
+  50%  {background-color: lighten($shiftBlue, 10%);}
+  100% {background-color: $shiftGray;}
+}
+
+.flash .meter_wrapper {
+  animation: flash_background 1s infinite;
+  -webkit-animation: flash_background 1s infinite;
+}
+
 .meter_wrapper {
   background-color: $shiftGray;
   margin: 0 10px;
@@ -118,7 +135,6 @@ fieldset {
 }
 
 .meter_header {
-  background: $shiftGray;
 }
 
 
