@@ -1,0 +1,14 @@
+{
+  "name": "angular-bootstrap",
+  "homepage": "https://github.com/mattrw89/bootstrap",
+  "version": "0.11.0-custom3",
+  "_release": "0.11.0-custom3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.11.0-custom3",
+    "commit": "37c6fdc72d0fbb226e89054944d993e3b85c13cf"
+  },
+  "_source": "git://github.com/mattrw89/bootstrap.git",
+  "_target": "0.11.0-custom3",
+  "_originalSource": "git://github.com/mattrw89/bootstrap.git"
+}

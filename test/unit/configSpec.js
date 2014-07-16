@@ -3,7 +3,7 @@
 /* verify config settings are present */
 
 describe('service', function() {
-   beforeEach(module('myApp.config'));
+   beforeEach(module('shiftagentMeters.config'));
 
    it('should be configured (FBURL was set)', inject(function(FBURL) {
       expect(FBURL).not.toEqual('https://INSTANCE.firebaseio.com');

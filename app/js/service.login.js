@@ -1,5 +1,5 @@
 
-angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
+angular.module('shiftagentMeters.service.login', ['firebase', 'shiftagentMeters.service.firebase'])
 
    .factory('loginService', ['$rootScope', '$firebaseSimpleLogin', 'firebaseRef', 'profileCreator', '$timeout',
       function($rootScope, $firebaseSimpleLogin, firebaseRef, profileCreator, $timeout) {
@@ -15,20 +15,31 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
              * @param {Function} [callback]
              * @returns {*}
              */
-            login: function(email, pass, callback) {
+            login: function(callback) {
                assertAuth();
-               auth.$login('password', {
-                  email: email,
-                  password: pass,
-                  rememberMe: true
-               }).then(function(user) {
-                     if( callback ) {
-                        //todo-bug https://github.com/firebase/angularFire/issues/199
-                        $timeout(function() {
-                           callback(null, user);
-                        });
+               auth.$login('github').then(function(user) {
+                 console.log(user);
+
+                 firebaseRef('users/' + user.uid).set({
+                   username: user.username,
+                   displayName: user.displayName,
+                   uid: user.uid,
+                   id: user.id,
+                   avatar_url: user.avatar_url
+                 }, function (err) {
+                   if (!err) {
+                     if (callback) {
+                       //todo-bug https://github.com/firebase/angularFire/issues/199
+                       $timeout(function () {
+                         callback(null, user);
+                       });
                      }
-                  }, callback);
+
+                   } else {
+                     console.log('err in login');
+                   }
+                 });
+               }, callback);
             },
 
             logout: function() {
@@ -36,22 +47,9 @@ angular.module('myApp.service.login', ['firebase', 'myApp.service.firebase'])
                auth.$logout();
             },
 
-            changePassword: function(opts) {
-               assertAuth();
-               var cb = opts.callback || function() {};
-               if( !opts.oldpass || !opts.newpass ) {
-                  $timeout(function(){ cb('Please enter a password'); });
-               }
-               else if( opts.newpass !== opts.confirm ) {
-                  $timeout(function() { cb('Passwords do not match'); });
-               }
-               else {
-                  auth.$changePassword(opts.email, opts.oldpass, opts.newpass).then(function() { cb && cb(null) }, cb);
-               }
-            },
-
             createAccount: function(email, pass, callback) {
                assertAuth();
+
                auth.$createUser(email, pass).then(function(user) { callback && callback(null, user) }, callback);
             },
 

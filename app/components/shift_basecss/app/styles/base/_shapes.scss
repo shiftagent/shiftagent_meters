@@ -1,0 +1,78 @@
+@mixin triangle($height, $length, $color) {
+  width: 0;
+  height: 0;
+  border-top: $height/2 solid transparent;
+  border-left: $length solid $color;
+  border-bottom: $height/2 solid transparent;
+}
+
+@mixin triangle-vertical($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-right: $width/2 solid transparent;
+  border-top: $height solid $color;
+  border-left: $width/2 solid transparent;
+}
+
+@mixin star($scale, $color) {
+  @include transform(scale($scale, $scale));
+  & div {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: $color;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid $color;
+    border-left: 100px solid transparent;
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+  }
+
+  & div:before {
+    border-bottom: 80px solid $color;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+  }
+  & div:after {
+    position: absolute;
+    display: block;
+    color: $color;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid $color;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-70deg);
+    -moz-transform:    rotate(-70deg);
+    -ms-transform:     rotate(-70deg);
+    -o-transform:      rotate(-70deg);
+    content: '';
+  }
+}
+
+@mixin circle($size, $color) {
+  width: $size;
+  height: $size;
+  background: $color;
+  -moz-border-radius:$size/2;
+  -webkit-border-radius: $size/2;
+  border-radius: $size/2;
+}

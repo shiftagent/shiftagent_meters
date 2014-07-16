@@ -1,0 +1,103 @@
+@mixin sa-button-color-generator($textColor, $backgroundColor, $borderColor) {
+  background-color: rgba($backgroundColor, 0.7);
+  border-color: $borderColor;
+  color: $textColor;
+
+  &:hover {
+    background-color: rgba($backgroundColor, 1.0);
+  }
+
+  &:active {
+    background-color: darken($backgroundColor, 5%);
+  }
+
+  &:focus {
+    background-color: rgba($backgroundColor, 1.0);
+  }
+  
+  &[disabled] {
+    background-color: desaturate($backgroundColor, 50%);
+    color: desaturate($textColor, 50%);
+  }
+}
+
+@mixin sa-button-size-generator($fontSize, $padding) {
+  font-size: $fontSize;
+  padding: $padding;
+}
+
+@mixin sa-button-icon-spacing($margin, $font-size, $line-height) {
+  & i {
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+  }
+}
+
+.sa_button {
+  @extend .helvetica;
+  @include border-radius($borderRadius);
+  @include make-unselectable();
+  border: solid 1px transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  // Override SA size options
+  &.sa_tiny {
+    @include sa-button-size-generator(.8em, 0px 6px);
+    @include sa-button-icon-spacing(0 6px 0 0, inherit, inherit);
+  }
+
+  &.sa_small {
+    @include sa-button-size-generator(.9em, 3px 8px);
+    @include sa-button-icon-spacing(0 6px 0 0, inherit, inherit);
+  }
+
+  &.sa_medium {
+    @include sa-button-size-generator(1.1em, 8px 10px);
+    @include sa-button-icon-spacing(0 8px 0 0, inherit, inherit);
+  }
+
+  &.sa_large {
+    @include sa-button-size-generator(1.8em, 14px 16px);
+    @include sa-button-icon-spacing(0 14px 0 0, inherit, inherit);
+  }
+
+  // Override SA color options
+  &.sa_blue {
+    @include sa-button-color-generator(white, $shiftBlue, $shiftBlue);
+  }
+
+  &.sa_orange {
+    @include sa-button-color-generator(white, $shiftOrange, $shiftOrange);
+  }
+
+  &.sa_green {
+    @include sa-button-color-generator(white, $shiftGreen, $shiftGreen);
+  }
+
+  &.sa_salmon {
+    @include sa-button-color-generator(white, $shiftSalmon, $shiftSalmon);
+  }
+
+  &.sa_gray {
+    @include sa-button-color-generator($shiftCharcoal, $shiftGray, $shiftGray);
+  }
+
+  &.sa_rouge {
+    @include sa-button-color-generator(white, $shiftRouge, $shiftRouge);
+  }
+}

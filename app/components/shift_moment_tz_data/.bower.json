@@ -1,0 +1,19 @@
+{
+  "name": "shift_moment_tz_data",
+  "version": "0.0.1",
+  "homepage": "https://github.com/shiftagent/shift_moment_tz_data",
+  "authors": [
+    "Matt Webb <matt@shiftagent.org>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "e212343a001047ba6d2b600dba2c532fedc8ed80"
+  },
+  "_source": "git://github.com/shiftagent/shift_moment_tz_data.git",
+  "_target": "0.0.1",
+  "_originalSource": "git://github.com/shiftagent/shift_moment_tz_data.git"
+}

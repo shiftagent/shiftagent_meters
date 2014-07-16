@@ -3,7 +3,7 @@
 
    /* Services */
 
-   angular.module('myApp.services', ['myApp.service.login', 'myApp.service.firebase'])
+   angular.module('shiftagentMeters.services', ['shiftagentMeters.service.login', 'shiftagentMeters.service.firebase'])
 
       // put your services here!
       // .service('serviceName', ['dependency', function(dependency) {}]);

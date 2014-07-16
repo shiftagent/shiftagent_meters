@@ -1,0 +1,19 @@
+{
+  "name": "autofill-directive",
+  "version": "2.0.0",
+  "main": "autofill-directive.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": ">=1.2.0"
+  },
+  "homepage": "https://github.com/chesleybrown/autofill-directive",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "5766aa34e3c88028dac85d7b2f18441476da79cd"
+  },
+  "_source": "git://github.com/chesleybrown/autofill-directive.git",
+  "_target": "~2.0.0",
+  "_originalSource": "autofill-directive"
+}

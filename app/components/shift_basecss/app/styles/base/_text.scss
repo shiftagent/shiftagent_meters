@@ -1,0 +1,233 @@
+//@import '../globals/colors';
+
+html { -webkit-font-smoothing: antialiased; }
+
+.roboto_base {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto_light {
+  @extend .roboto_base;
+  font-weight: 300;
+}
+
+.roboto_med {
+  @extend .roboto_base;
+  font-weight: 400;
+}
+
+.helvetica {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.oswald_base {
+  font-family: "Oswald", sans-serif;
+}
+
+.oswald_light {
+  @extend .oswald_base;
+  font-weight: 300;
+}
+
+.oswald_italic_title {
+  @extend .oswald_med;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.oswald_med {
+  @extend .oswald_base;
+  font-weight: 400;
+}
+
+.base_text {
+  @extend .helvetica;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.base_text_no_pad {
+  @extend .helvetica;
+  font-size: 12px;
+}
+
+.base_header_text {
+  @extend .roboto_light;
+  font-size: 14px;
+}
+
+.dark_text {
+  color: $shiftCharcoal;
+}
+
+.light_text {
+  color: $shiftOffwhite;
+}
+
+.gray_text {
+  color: $shiftGray;
+}
+
+.gray_lighter_text {
+  color: $shiftLightGray;
+}
+
+.gray_lightest_text {
+  color: $shiftLightestGray;
+}
+
+.darkgray_text {
+  color: $shiftDarkgray;
+}
+
+.orange_text {
+  color: $shiftOrange;
+}
+
+.orange_text_href {
+  color: $shiftOrange;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    color: $textHighlightColor;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: rgba(255,255,255,.2);
+    color: $textHighlightColor;
+  }
+}
+
+.green_text {
+  color: $shiftGreen;
+}
+
+.blue_text {
+  color: $shiftBlue;
+}
+
+.blue_text_href {
+  color: $shiftBlue;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    color: $textHighlightColor;
+    text-decoration: none;
+  }
+
+  &:active {
+    //background: rgba(255,255,255,.2);
+    color: $textHighlightColor;
+  }
+}
+
+.blue_darker_text {
+  color:$shiftBlueDarker;
+}
+
+.rouge_text {
+  color: $shiftRouge;
+}
+
+.dark_header {
+  @extend .dark_text;
+  @extend .base_header_text;
+}
+
+.light_header {
+  @extend .light_text;
+  @extend .base_header_text;
+}
+
+.text_8pt {
+  font-size: 8px;
+}
+
+.text_9 {
+  font-size: 0.9em;
+}
+
+.text_7 {
+  font-size: 0.7em;
+}
+
+.text_6 {
+  font-size: 0.6em;
+}
+
+.text_8 {
+  font-size: 0.8em;
+}
+
+.font_09em {
+  font-size: 0.9em;
+}
+
+.font_1-2em {
+  font-size: 1.2em;
+}
+
+.font_1-5em {
+  font-size: 1.5em;
+}
+
+.font_1-7em {
+  font-size: 1.7em;
+}
+
+.font_2em {
+  font-size: 2.0em;
+}
+
+.font_2-5em {
+  font-size: 2.5em;
+}
+
+.text_10pt_sched {
+  font-size: 10px;
+  margin-top: -3px;   // "centers" the text within a thin button
+}
+
+.text_10pt {
+  font-size: 10px;
+}
+
+.text_12pt {
+  font-size: 12px;
+}
+
+.text_14pt {
+  font-size: 14px;
+}
+
+.text_16pt {
+  font-size: 16px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+
+.bold {
+  font-weight: 400;
+}
+
+.embossed_icon {
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.8), 0px -2px 2px rgba(0,0,0,.9);
+  color:$shiftCharcoalShadow;
+}
+
+.sa_hover {
+  &.sa_darktheme:hover {
+    color: $shiftOffwhite;
+  }
+
+  &.sa_lighttheme:hover {
+    color: $shiftGray;
+  }
+}

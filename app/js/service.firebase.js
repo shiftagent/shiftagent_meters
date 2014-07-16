@@ -1,5 +1,5 @@
 
-angular.module('myApp.service.firebase', ['firebase'])
+angular.module('shiftagentMeters.service.firebase', ['firebase'])
 
 // a simple utility to create references to Firebase paths
    .factory('firebaseRef', ['Firebase', 'FBURL', function(Firebase, FBURL) {
@@ -26,6 +26,7 @@ angular.module('myApp.service.firebase', ['firebase'])
       return function(path, limit) {
          var ref = firebaseRef(path);
          limit && (ref = ref.limit(limit));
+         console.log($firebase(ref));
          return $firebase(ref);
       }
    }]);

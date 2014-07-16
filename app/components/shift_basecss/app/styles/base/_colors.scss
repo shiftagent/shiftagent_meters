@@ -1,0 +1,86 @@
+// Base Colors
+$shiftGreen: #94ba65;         //  rgb 148,186,101
+$shiftBlue: #00b3b5;          //  rgb 0,179,181
+$shiftOrange: #ff9035;        //  rgb 255,144,53
+$shiftRouge: #983434;         //  rgb 152,52,52
+$shiftOffwhite: #e9e9e9;      //  rgb 233,233,233
+$shiftGray: #bcbcbc;          //  rgb  188,188,188
+
+$shiftBlueDarker: #0a8789;    //  rgb  10,135,137
+$shiftOrangedarker: #be7030;  //  rgb 190,112,48
+$shiftTan: #C2B49A;           //  rgb 194,180,154
+$shiftMint: #ACD4CC;          //  rgb  172,212,204
+$shiftSalmon: #E87162;        // rgb 232,113,98
+$shiftYellow: #f9e435;        // rgb 249,228,53
+
+$shiftBlueNDarkest: darken($shiftBlueDarker, 7%);
+
+$shiftLightestGray: lighten($shiftGray, 10%);
+$shiftDarkgray: #4c4c4c;
+$shiftDarkgraySchedule: #424242;
+$shiftLightGray: lighten($shiftDarkgray, 30%);
+$shiftCharcoal: #232323;    // rgb (35,35,35)
+$shiftCharcoalShadow: lighten($shiftCharcoal, 16%);
+
+$darkTextColor: $shiftCharcoal;
+$lightTextColor: $shiftOffwhite;
+
+$borderColor: $shiftOffwhite;
+$darkborderColor: $shiftCharcoal;
+$textColor: $shiftOffwhite;
+$darktextColor: $shiftCharcoal;
+$darktextColor2: adjust-lightness($darktextColor, 10%);
+$borderHighlightColor: white;
+$textHighlightColor: white;
+
+$shiftBlueDarker: darken($shiftBlue, 8%);
+
+$body_background_color : #2c2c2c !default;
+$logo_accent_color: $shiftBlue !default;
+$profile_tab_settings_color: #999999 !default;
+$green_status: $shiftGreen !default;
+$main_menu_button_text_color: white !default;
+$modal_text_color_lighter: #aaa !default;
+$modal_text_color_light: #ccc !default;
+$modal_text_color_dark: #424242 !default;
+
+$indicator_circle_color: #9d261d !default;
+$modal_text_color_lighter: #aaa !default;
+$modal_text_color_light: #ccc !default;
+$modal_text_color_dark: #424242 !default;
+$sideBarBackgroundColor: #272727 !default;
+$containerLeftBackgroundColor: #222222 !default;
+
+$sideBarBlueUnselected: $shiftBlueDarker !default;
+$sideBarBlueSelected: $shiftBlue !default;
+$sideBarOrangeUnselected: $shiftOrangedarker !default;
+$sideBarOrangeSelected: $shiftOrange !default;
+$sideBarMenuTextColor: white !default;
+
+$sideBarUnselectedOdd: #ccc;
+$sideBarUnselectedEven: #d6d6d6;
+
+$darkerBlueAqua: #0b888a;
+$blueAqua: #2f9999;
+
+
+// background-image: -webkit-linear-gradient( bottom, rgb( 73, 108, 170 ) 2.002%, rgb( 41, 154, 224 ) 3.003%, rgb( 0, 187, 255 ) 50%, rgb( 77, 208, 250 ) 73.755%, rgb( 125, 235, 251 ) 97.998%, rgb( 238, 248, 255 ) 100%);
+// @include box-shadow (inset 0px -1px 1px 0px rgba( 0, 0, 0, 0.8 ), inset 0px 0px rgba( 0, 0, 0, 1.0 ),
+//  inset 0px 1px 2px 0px rgba( 77, 77, 77, 0.7 ), inset -1px 1px rgba( 0, 0, 0, 0.8 ));
+
+
+// Grays
+// -------------------------
+
+
+// Accent colors
+// -------------------------
+$blue:                  $shiftBlue !default;
+$blueDark:              $shiftBlue !default;
+$green:                 $shiftGreen !default;
+$red:                   $shiftRouge !default;
+$yellow:                #ffc40d !default;
+$orange:                $shiftOrange !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+

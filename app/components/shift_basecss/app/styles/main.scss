@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ @package: prototype
+
+ @author: Author name
+ @www: somedomain.com
+
+ @copyright: COPYRIGHT 7 Author name
+ @license: MIT
+
+ =============================================================================
+ Filename: main.scss
+ =============================================================================
+ This file is responsible for all styles on the prototype app.  Styles should be compiled using compass and sass.
+ --------------------------------------------------------------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import 'compass';
+
+// Shift Libraries
+@import 'base/toolbox';
+@import 'base/bootstrap_mixins';
+@import 'base/reset';
+@import 'base/vars';
+@import 'base/colors';
+@import 'base/text';
+@import 'base/links';
+@import 'base/buttons';
+@import 'base/forms';
+@import 'base/icons';
+
+// Preview Page CSS
+.surround {
+  margin: 20px;
+  display: inline-block;
+  border: solid black 1px;
+
+  & > div {
+    margin: 20px;
+
+  }
+
+  & > p {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px;
+
+    &.header {
+      font-weight: bold;
+    }
+  }
+
+  & > form {
+    margin: 20px;
+  }
+
+}
+
+.modal {
+    background-image: linear-gradient(to bottom, #F8F8F8 0%, #E9E9E9 100%);
+}
+
+.body {
+  background: $shiftCharcoal;
+  color: $lightTextColor;
+}
+
+.test_segment {
+	background: darken($shiftBlue, 10%);
+	border: solid black 1px;
+	display: inline-block;
+  margin: 30px 10px 0;
+}

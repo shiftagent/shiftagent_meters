@@ -1,0 +1,40 @@
+{
+  "name": "shiftAgent_meters",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.2.18",
+    "json3": "~3.2.4",
+    "es5-shim": "~2.0.8",
+    "angular-bootstrap": "git://github.com/mattrw89/bootstrap.git#0.11.0-custom3",
+    "lodash": "~2.4.1",
+    "angular-resource": "~1.2.18",
+    "angular-cookies": "~1.2.18",
+    "angular-route": "~1.2.18",
+    "angular-animate": "~1.2.18",
+    "angular-strap": "git://github.com/mattrw89/angular-strap.git#master",
+    "bootstrap-timepicker": "0.2.4",
+    "moment": "~2.5.1",
+    "angularytics": "~0.3.0",
+    "twix.js": "git://github.com/icambron/twix.js",
+    "moment-timezone": "~0.0.3",
+    "angular-flash": "~0.1.9",
+    "angular-dropdowns": "git://github.com/mattrw89/angular-dropdowns",
+    "angularLocalStorage": "~0.1.7",
+    "angular-bindonce": "~0.3.1",
+    "autofill-event": "~1.0.0",
+    "autofill-directive": "~2.0.0",
+    "angular-ui-sortable": "~0.12.6",
+    "angular-ui-router": "git://github.com/shiftagent/ui-router.git#master",
+    "shift_basecss": "git@github.com:shiftagent/shift_basecss.git#0.0.23",
+    "shift_moment_tz_data": "git://github.com/shiftagent/shift_moment_tz_data.git#0.0.1",
+    "angucomplete": "https://github.com/shiftagent/angucomplete.git#1.1.1",
+    "angularjs-nvd3-directives": "~0.0.7"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.18",
+    "angular-scenario": "~1.2.18"
+  },
+  "install": {
+    "path": "app/components"
+  }
+}

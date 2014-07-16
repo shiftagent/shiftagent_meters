@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<title>prototype</title>
+	<meta name = "description" content = "A sample description">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+</head>
+<body class="helvetica">
+
+	<div class="test_segment">
+		<div class="surround modal">
+		  <p class="helvetica header">Links</p>
+		  <p>This is a sentence with a <a class="sa_link sa_blue sa_lighttheme">link</a> mid-sentence.</p>
+		</div>
+
+		<div class="surround body">
+		  <p class="helvetica header">Links</p>
+		  <p>This is a sentence with a <a class="sa_link sa_blue sa_darktheme">link</a> mid-sentence.</p>
+		</div>
+	</div>
+
+<br />
+
+	<div class="test_segment">
+		<div class="surround modal">
+			<form class="sa_form sa_lighttheme">
+				<div class="sa_form_title sa_small">Shift Agent</div>
+				<div class="sa_form_subtitle sa_small">Let's Get Started!</div>
+				<div class="sa_form_content_wrapper">
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="firstName">First Name</label>
+						<input type="text" id="firstName" class="sa_input sa_small" placeholder="John"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="lastName">Last Name</label>
+						<input type="text" id="lastName" class="sa_input sa_small" placeholder="Doe"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="email">Email Address</label>
+						<input type="text" id="email" class="sa_input sa_small" placeholder="j.doe@myshop.com"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="password">Password</label>
+						<input type="password" class="sa_input sa_small" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="timezone">Timezone</label>
+
+						<div class="sa_select_wrapper sa_small">
+							<div class="arrow"></div>
+							<select id="timezone">
+								<option value="1">Timezone 1</option>
+								<option value="2">Timezone 2</option>
+								<option value="3">Timezone 3</option>
+								<option value="4">Timezone 4</option>
+								<option value="5">Timezone 5</option>
+							</select>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="salary">Salary:</label>
+						<div class="sa_input_prepend sa_small">
+							<span class="add-on">$</span>
+							<input type="text" id="salary" class="sa_input" placeholder="78,000"></input>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="hourly">Hourly:</label>
+						<div class="sa_input_append sa_small sa_input_prepend">
+							<span class="add-on">$</span>
+							<input type="text" id="hourly" class="sa_input" placeholder="15"></input>
+							<span class="add-on">.00</span>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="percent">Percentage:</label>
+						<div class="sa_input_append sa_small">
+							<input type="text" id="percent" class="sa_input" placeholder="100"></input>
+							<span class="add-on">%</span>
+						</div>
+					</div>
+					<div class="sa_form_controls">
+						<div class="sa_checkbox_wrapper">
+							<input type="checkbox" id="terms"></input>
+							<label class="sa_label sa_small" for="terms">I agree to the terms and conditions.</label>
+						</div>
+						<button class="sa_button sa_small sa_blue">Sign Me Up!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="surround body">
+			<form class="sa_form sa_darktheme">
+				<div class="sa_form_title sa_small">Shift Agent</div>
+				<div class="sa_form_subtitle sa_small">Let's Get Started!</div>
+				<div class="sa_form_content_wrapper">
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="firstName">First Name</label>
+						<input type="text" id="firstName" class="sa_input sa_small" placeholder="John"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="lastName">Last Name</label>
+						<input type="text" id="lastName" class="sa_input sa_small" placeholder="Doe"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="email">Email Address</label>
+						<input type="text" id="email" class="sa_input sa_small" placeholder="j.doe@myshop.com"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="password">Password</label>
+						<input type="password" class="sa_input sa_small" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"></input>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="timezone">Timezone</label>
+
+						<div class="sa_select_wrapper sa_small">
+							<div class="arrow"></div>
+							<select id="timezone">
+								<option value="1">Timezone 1</option>
+								<option value="2">Timezone 2</option>
+								<option value="3">Timezone 3</option>
+								<option value="4">Timezone 4</option>
+								<option value="5">Timezone 5</option>
+							</select>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="salary">Salary:</label>
+						<div class="sa_input_prepend sa_small">
+							<span class="add-on">$</span>
+							<input type="text" id="salary" class="sa_input" placeholder="78,000"></input>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="hourly">Hourly:</label>
+						<div class="sa_input_append sa_small sa_input_prepend">
+							<span class="add-on">$</span>
+							<input type="text" id="hourly" class="sa_input" placeholder="15"></input>
+							<span class="add-on">.00</span>
+						</div>
+					</div>
+					<div class="sa_form_group sa_small">
+						<label class="sa_label sa_small" for="percent">Percentage:</label>
+						<div class="sa_input_append sa_small">
+							<input type="text" id="percent" class="sa_input" placeholder="100"></input>
+							<span class="add-on">%</span>
+						</div>
+					</div>
+					<div class="sa_form_controls">
+						<div class="sa_checkbox_wrapper">
+							<input type="checkbox" id="terms"></input>
+							<label class="sa_label sa_small" for="terms">I agree to the terms and conditions.</label>
+						</div>
+						<button class="sa_button sa_small sa_blue">Sign Me Up!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<br />
+
+		<div class="surround modal">
+				<form class="sa_form sa_lighttheme">
+					<div class="sa_form_title sa_medium">Shift Agent</div>
+					<div class="sa_form_subtitle sa_medium">Let's Get Started!</div>
+					<div class="sa_form_content_wrapper">
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="firstName">First Name</label>
+							<input type="text" id="firstName" class="sa_input sa_medium" placeholder="John"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="lastName">Last Name</label>
+							<input type="text" id="lastName" class="sa_input sa_medium" placeholder="Doe"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="email">Email Address</label>
+							<input type="text" id="email" class="sa_input sa_medium" placeholder="j.doe@myshop.com"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="password">Password</label>
+							<input type="password" class="sa_input sa_medium" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="timezone">Timezone</label>
+
+							<div class="sa_select_wrapper sa_medium">
+								<div class="arrow"></div>
+								<select id="timezone">
+									<option value="1">Timezone 1</option>
+									<option value="2">Timezone 2</option>
+									<option value="3">Timezone 3</option>
+									<option value="4">Timezone 4</option>
+									<option value="5">Timezone 5</option>
+								</select>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="salary">Salary:</label>
+							<div class="sa_input_prepend sa_medium">
+								<span class="add-on">$</span>
+								<input type="text" id="salary" class="sa_input" placeholder="78,000"></input>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="hourly">Hourly:</label>
+							<div class="sa_input_append sa_medium sa_input_prepend">
+								<span class="add-on">$</span>
+								<input type="text" id="hourly" class="sa_input" placeholder="15"></input>
+								<span class="add-on">.00</span>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="percent">Percentage:</label>
+							<div class="sa_input_append sa_medium">
+								<input type="text" id="percent" class="sa_input" placeholder="100"></input>
+								<span class="add-on">%</span>
+							</div>
+						</div>
+						<div class="sa_form_controls">
+							<div class="sa_checkbox_wrapper">
+								<input type="checkbox" id="terms"></input>
+								<label class="sa_label sa_medium" for="terms">I agree to the terms and conditions.</label>
+							</div>
+							<button class="sa_button sa_medium sa_blue">Sign Me Up!</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="surround body">
+				<form class="sa_form sa_darktheme">
+					<div class="sa_form_title sa_medium">Shift Agent</div>
+					<div class="sa_form_subtitle sa_medium">Let's Get Started!</div>
+					<div class="sa_form_content_wrapper">
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="firstName">First Name</label>
+							<input type="text" id="firstName" class="sa_input sa_medium" placeholder="John"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="lastName">Last Name</label>
+							<input type="text" id="lastName" class="sa_input sa_medium" placeholder="Doe"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="email">Email Address</label>
+							<input type="text" id="email" class="sa_input sa_medium" placeholder="j.doe@myshop.com"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="password">Password</label>
+							<input type="password" class="sa_input sa_medium" id="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"></input>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="timezone">Timezone</label>
+
+							<div class="sa_select_wrapper sa_medium">
+								<div class="arrow"></div>
+								<select id="timezone">
+									<option value="1">Timezone 1</option>
+									<option value="2">Timezone 2</option>
+									<option value="3">Timezone 3</option>
+									<option value="4">Timezone 4</option>
+									<option value="5">Timezone 5</option>
+								</select>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="salary">Salary:</label>
+							<div class="sa_input_prepend sa_medium">
+								<span class="add-on">$</span>
+								<input type="text" id="salary" class="sa_input" placeholder="78,000"></input>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="hourly">Hourly:</label>
+							<div class="sa_input_append sa_medium sa_input_prepend">
+								<span class="add-on">$</span>
+								<input type="text" id="hourly" class="sa_input" placeholder="15"></input>
+								<span class="add-on">.00</span>
+							</div>
+						</div>
+						<div class="sa_form_group sa_medium">
+							<label class="sa_label sa_medium" for="percent">Percentage:</label>
+							<div class="sa_input_append sa_medium">
+								<input type="text" id="percent" class="sa_input" placeholder="100"></input>
+								<span class="add-on">%</span>
+							</div>
+						</div>
+						<div class="sa_form_controls">
+							<div class="sa_checkbox_wrapper">
+								<input type="checkbox" id="terms"></input>
+								<label class="sa_label sa_medium" for="terms">I agree to the terms and conditions.</label>
+							</div>
+							<button class="sa_button sa_medium sa_blue">Sign Me Up!</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="test_segment">
+		<div class="surround modal">
+		  <p class="helvetica header">Small Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Disapprove</div>
+		    <div class="sa_button sa_blue sa_small">Disapprove</div>
+		    <div class="sa_button sa_green sa_small">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_small">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_small">Disapprove</div>
+		    <div class="sa_button sa_gray sa_small">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Next Step</div>
+		    <div class="sa_button sa_blue sa_small">Next Step</div>
+		    <div class="sa_button sa_green sa_small">Next Step</div>
+		    <div class="sa_button sa_salmon sa_small">Next Step</div>
+		    <div class="sa_button sa_rouge sa_small">Next Step</div>
+		    <div class="sa_button sa_gray sa_small">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Go Back</div>
+		    <div class="sa_button sa_blue sa_small">Go Back</div>
+		    <div class="sa_button sa_green sa_small">Go Back</div>
+		    <div class="sa_button sa_salmon sa_small">Go Back</div>
+		    <div class="sa_button sa_rouge sa_small">Go Back</div>
+		    <div class="sa_button sa_gray sa_small">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+		<div class="surround body">
+		  <p class="helvetica header">Small Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Disapprove</div>
+		    <div class="sa_button sa_blue sa_small">Disapprove</div>
+		    <div class="sa_button sa_green sa_small">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_small">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_small">Disapprove</div>
+		    <div class="sa_button sa_gray sa_small">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Next Step</div>
+		    <div class="sa_button sa_blue sa_small">Next Step</div>
+		    <div class="sa_button sa_green sa_small">Next Step</div>
+		    <div class="sa_button sa_salmon sa_small">Next Step</div>
+		    <div class="sa_button sa_rouge sa_small">Next Step</div>
+		    <div class="sa_button sa_gray sa_small">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small">Go Back</div>
+		    <div class="sa_button sa_blue sa_small">Go Back</div>
+		    <div class="sa_button sa_green sa_small">Go Back</div>
+		    <div class="sa_button sa_salmon sa_small">Go Back</div>
+		    <div class="sa_button sa_rouge sa_small">Go Back</div>
+		    <div class="sa_button sa_gray sa_small">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_small"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+
+
+		<div class="surround modal">
+		  <p class="helvetica header">Medium Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Disapprove</div>
+		    <div class="sa_button sa_blue sa_medium">Disapprove</div>
+		    <div class="sa_button sa_green sa_medium">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_medium">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_medium">Disapprove</div>
+		    <div class="sa_button sa_gray sa_medium">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Next Step</div>
+		    <div class="sa_button sa_blue sa_medium">Next Step</div>
+		    <div class="sa_button sa_green sa_medium">Next Step</div>
+		    <div class="sa_button sa_salmon sa_medium">Next Step</div>
+		    <div class="sa_button sa_rouge sa_medium">Next Step</div>
+		    <div class="sa_button sa_gray sa_medium">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Go Back</div>
+		    <div class="sa_button sa_blue sa_medium">Go Back</div>
+		    <div class="sa_button sa_green sa_medium">Go Back</div>
+		    <div class="sa_button sa_salmon sa_medium">Go Back</div>
+		    <div class="sa_button sa_rouge sa_medium">Go Back</div>
+		    <div class="sa_button sa_gray sa_medium">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+		<div class="surround body">
+		  <p class="helvetica header">Medium Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Disapprove</div>
+		    <div class="sa_button sa_blue sa_medium">Disapprove</div>
+		    <div class="sa_button sa_green sa_medium">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_medium">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_medium">Disapprove</div>
+		    <div class="sa_button sa_gray sa_medium">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Next Step</div>
+		    <div class="sa_button sa_blue sa_medium">Next Step</div>
+		    <div class="sa_button sa_green sa_medium">Next Step</div>
+		    <div class="sa_button sa_salmon sa_medium">Next Step</div>
+		    <div class="sa_button sa_rouge sa_medium">Next Step</div>
+		    <div class="sa_button sa_gray sa_medium">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium">Go Back</div>
+		    <div class="sa_button sa_blue sa_medium">Go Back</div>
+		    <div class="sa_button sa_green sa_medium">Go Back</div>
+		    <div class="sa_button sa_salmon sa_medium">Go Back</div>
+		    <div class="sa_button sa_rouge sa_medium">Go Back</div>
+		    <div class="sa_button sa_gray sa_medium">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_medium"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+
+
+		<div class="surround modal">
+		  <p class="helvetica header">Large Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Disapprove</div>
+		    <div class="sa_button sa_blue sa_large">Disapprove</div>
+		    <div class="sa_button sa_green sa_large">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_large">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_large">Disapprove</div>
+		    <div class="sa_button sa_gray sa_large">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Next Step</div>
+		    <div class="sa_button sa_blue sa_large">Next Step</div>
+		    <div class="sa_button sa_green sa_large">Next Step</div>
+		    <div class="sa_button sa_salmon sa_large">Next Step</div>
+		    <div class="sa_button sa_rouge sa_large">Next Step</div>
+		    <div class="sa_button sa_gray sa_large">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Go Back</div>
+		    <div class="sa_button sa_blue sa_large">Go Back</div>
+		    <div class="sa_button sa_green sa_large">Go Back</div>
+		    <div class="sa_button sa_salmon sa_large">Go Back</div>
+		    <div class="sa_button sa_rouge sa_large">Go Back</div>
+		    <div class="sa_button sa_gray sa_large">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+		<div class="surround body">
+		  <p class="helvetica header">Large Buttons</p>
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Disapprove</div>
+		    <div class="sa_button sa_blue sa_large">Disapprove</div>
+		    <div class="sa_button sa_green sa_large">Disapprove</div>
+		    <div class="sa_button sa_salmon sa_large">Disapprove</div>
+		    <div class="sa_button sa_rouge sa_large">Disapprove</div>
+		    <div class="sa_button sa_gray sa_large">Disapprove</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Next Step</div>
+		    <div class="sa_button sa_blue sa_large">Next Step</div>
+		    <div class="sa_button sa_green sa_large">Next Step</div>
+		    <div class="sa_button sa_salmon sa_large">Next Step</div>
+		    <div class="sa_button sa_rouge sa_large">Next Step</div>
+		    <div class="sa_button sa_gray sa_large">Next Step</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large">Go Back</div>
+		    <div class="sa_button sa_blue sa_large">Go Back</div>
+		    <div class="sa_button sa_green sa_large">Go Back</div>
+		    <div class="sa_button sa_salmon sa_large">Go Back</div>
+		    <div class="sa_button sa_rouge sa_large">Go Back</div>
+		    <div class="sa_button sa_gray sa_large">Go Back</div>
+		  </div>
+		  <hr />
+		  <div>
+		    <div class="sa_button sa_orange sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_blue sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_green sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_salmon sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_rouge sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		    <div class="sa_button sa_gray sa_large"><i class="icon-pencil"></i>Manage Positions</div>
+		  </div>
+		</div>
+
+
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="scripts/main.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- TODO: Google Analytics -->
+</body>
+</html>
