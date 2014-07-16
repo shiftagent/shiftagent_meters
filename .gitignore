@@ -226,7 +226,7 @@ test_out/e2e.xml
 
 temp
 node_modules
-js/components
+app/components
 less/*.css
 sass/*.css
 .sass-cache
