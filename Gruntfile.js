@@ -61,6 +61,13 @@ module.exports = function (grunt) {
 			}
 		},
 
+		'gh-pages': {
+			options: {
+				base: 'dist'
+			},
+			src: ['**']
+		},
+
 		// The actual grunt server settings
 		connect: {
 			options: {
@@ -269,18 +276,37 @@ module.exports = function (grunt) {
 		//		 }
 		//	 }
 		// },
-		// uglify: {
-		//	 dist: {
-		//		 files: {
-		//			 "<%= yeoman.dist %>/scripts/scripts.js": [
-		//				 "<%= yeoman.dist %>/scripts/scripts.js"
-		//			 ]
-		//		 }
-		//	 }
-		// },
-		// concat: {
-		//	 dist: {}
-		// },
+		concat: {
+			 dist: {
+			 	files: {
+				 	"<%= yeoman.dist %>/scripts/scripts.js": [
+				 			 "<%= yeoman.app %>/app.js",
+							 "<%= yeoman.app %>/js/*.js"
+						  ]
+			 	 }
+			}
+		},
+		uglify: {
+			 dist: {
+				 files: {
+					 "<%= yeoman.dist %>/scripts/scripts.js": [
+						 "<%= yeoman.dist %>/scripts/scripts.js"
+					 ]
+				 }
+			 }
+		},
+		ngmin: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.dist %>/scripts',
+            src: 'scripts.js',
+            dest: '<%= yeoman.dist %>/scripts'
+          }
+        ]
+      }
+    },
 
 		// Copies remaining files to places other tasks can use
 		copy: {
@@ -296,7 +322,8 @@ module.exports = function (grunt) {
 						"img/{,*/}*.webp",
 						"{,*/}*.html",
 						"styles/fonts/{,*/}*.*",
-						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*"
+						"bower_components/" + (this.includeCompass ? "sass-" : "") + (this.includeCompass ? "fonts/" : "dist/fonts/") +"*.*",
+						"components/angucomplete/angucomplete.js"
 					]
 				}]
 			},
@@ -369,7 +396,9 @@ module.exports = function (grunt) {
 		"concurrent:dist",
 		"autoprefixer",
 		"concat",
+		"copy",
 		"cssmin",
+		"ngmin",
 		"uglify",
 		"copy:dist",
 		"rev",
@@ -380,6 +409,7 @@ module.exports = function (grunt) {
 	grunt.registerTask("default", [
 		"newer:jshint",
 		"test",
-		"build"
+		"build",
+		// "gh-pages"
 	]);
 };

@@ -9,7 +9,7 @@ angular.module('waitForAuth', [])
  * A service that returns a promise object, which is resolved once $firebaseSimpleLogin
  * is initialized (i.e. it returns login, logout, or error)
  */
-   .service('waitForAuth', function($rootScope, $q, $timeout) {
+   .service('waitForAuth', ['$rootScope', '$q', '$timeout', function($rootScope, $q, $timeout) {
       var def = $q.defer(), subs = [];
       subs.push($rootScope.$on('$firebaseSimpleLogin:login', fn));
       subs.push($rootScope.$on('$firebaseSimpleLogin:logout', fn));
@@ -25,12 +25,12 @@ angular.module('waitForAuth', [])
          });
       }
       return def.promise;
-   })
+   }])
 
 /**
  * A directive that hides the element from view until waitForAuth resolves
  */
-   .directive('ngCloakAuth', function(waitForAuth) {
+   .directive('ngCloakAuth', ['waitForAuth',function(waitForAuth) {
       return {
          restrict: 'A',
          compile: function(el) {
@@ -40,12 +40,12 @@ angular.module('waitForAuth', [])
             });
          }
       };
-   })
+   }])
 
 /**
  * A directive that shows elements only when the given authentication state is in effect
  */
-   .directive('ngShowAuth', function($rootScope) {
+   .directive('ngShowAuth', ['$rootScope', function($rootScope) {
       var loginState;
       $rootScope.$on('$firebaseSimpleLogin:login',  function() { loginState = 'login' });
       $rootScope.$on('$firebaseSimpleLogin:logout', function() { loginState = 'logout' });
@@ -89,4 +89,4 @@ angular.module('waitForAuth', [])
             $rootScope.$on('$firebaseSimpleLogin:error',  function() { fn('error') });
          }
       };
-   });
+   }]);
