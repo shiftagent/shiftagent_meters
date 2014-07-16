@@ -16,7 +16,7 @@
     "moment": "~2.5.1",
     "angularytics": "~0.3.0",
     "twix.js": "git://github.com/icambron/twix.js",
-    "moment-timezone": "~0.0.3",
+    "moment-timezone": "0.0.3",
     "angular-flash": "~0.1.9",
     "angular-dropdowns": "git://github.com/mattrw89/angular-dropdowns",
     "angularLocalStorage": "~0.1.7",

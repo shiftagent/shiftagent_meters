@@ -44,7 +44,7 @@ angular.module('shiftagentMeters.directives', []).
 
           scope.xAxisTickFormatFunction = function() {
             return function(val, i) {
-              return moment.utc(val).format('h:mma');
+              return moment.utc(val).tz('America/New_York').format('h:mma');
             };
           };
 
@@ -69,29 +69,29 @@ angular.module('shiftagentMeters.directives', []).
           var updateChartData = function() {
             var value = 0;
 
+            var values = [];
+            _.each(scope.meter.dataPoints, function(dp) {
+              if (dp.deltaValue !== 0) {
+                values.push([
+                    dp.dateCreated * 1000 - 1000,
+                    value
+                  ]);
+                values.push([
+                    dp.dateCreated * 1000,
+                    value += dp.deltaValue
+                  ]);
+              }
+            });
+
             scope.chartData = [{
               key: scope.meter.name,
-              values: _.map(scope.meter.dataPoints, function(dp) {
-                return [
-                      dp.dateCreated * 1000,
-                  value += dp.deltaValue
-                ];
-              })
+              values: values
             }];
 
             console.log(_.map(scope.chartData[0].values, function(v) {return v[1];}));
           };
 
-          var value = 0;
-          scope.chartData = [{
-            key: scope.meter.name,
-            values: _.map(scope.meter.dataPoints, function(dp) {
-              return [
-                dp.dateCreated * 1000,
-                value += dp.deltaValue
-              ];
-            })
-          }];
+          updateChartData();
 
           scope.$watchCollection('dataPoints', function() {
             console.log('WATCH DATAPOINTS');

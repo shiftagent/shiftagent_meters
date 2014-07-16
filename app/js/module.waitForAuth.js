@@ -37,9 +37,9 @@ angular.module('waitForAuth', [])
             el.addClass('hide');
             waitForAuth.then(function() {
                el.removeClass('hide');
-            })
+            });
          }
-      }
+      };
    })
 
 /**
@@ -47,9 +47,9 @@ angular.module('waitForAuth', [])
  */
    .directive('ngShowAuth', function($rootScope) {
       var loginState;
-      $rootScope.$on("$firebaseSimpleLogin:login",  function() { loginState = 'login' });
-      $rootScope.$on("$firebaseSimpleLogin:logout", function() { loginState = 'logout' });
-      $rootScope.$on("$firebaseSimpleLogin:error",  function() { loginState = 'error' });
+      $rootScope.$on('$firebaseSimpleLogin:login',  function() { loginState = 'login' });
+      $rootScope.$on('$firebaseSimpleLogin:logout', function() { loginState = 'logout' });
+      $rootScope.$on('$firebaseSimpleLogin:error',  function() { loginState = 'error' });
       function inList(needle, list) {
          var res = false;
          angular.forEach(list, function(x) {
@@ -84,9 +84,9 @@ angular.module('waitForAuth', [])
                el.toggleClass('hide', hide );
             }
             fn(loginState);
-            $rootScope.$on("$firebaseSimpleLogin:login",  function() { fn('login') });
-            $rootScope.$on("$firebaseSimpleLogin:logout", function() { fn('logout') });
-            $rootScope.$on("$firebaseSimpleLogin:error",  function() { fn('error') });
+            $rootScope.$on('$firebaseSimpleLogin:login',  function() { fn('login') });
+            $rootScope.$on('$firebaseSimpleLogin:logout', function() { fn('logout') });
+            $rootScope.$on('$firebaseSimpleLogin:error',  function() { fn('error') });
          }
-      }
+      };
    });
