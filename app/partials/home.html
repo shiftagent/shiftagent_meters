@@ -4,7 +4,7 @@
 <p class="status" ng-show-auth="logout">Not logged in</p>
 <p class="status error" ng-show-auth="error">{{auth.error}}</p>
 
-<div data-ng-repeat="(meterId, meter) in meters">
+<div data-ng-repeat="(meterId, meter) in meters" style="display:inline-block;width:400px;height:250px;">
   <div sa-meter="meter" meter-id="{{meterId}}" data-ng-if="meter.active"></div>
 </div>
 

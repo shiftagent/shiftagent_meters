@@ -1,24 +1,17 @@
-<ul>
-  <li>Name: {{meter.name}}</li>
-  <li>Value: {{_calcValue}}</li>
-  <li>Subject: <img src="{{subject.avatar_url}}" style="height:32px;width:32px;" data-ng-if="subject.avatar_url">{{subject.displayName}}</li>
-  <li ng-click="addDataPoint(1)" ng-show-auth="login">+1</li>
-  <li ng-click="addDataPoint(-1)" ng-show-auth="login">-1</li>
-  <!--<li ng-click="removeMeter()" ng-show-auth="login">Delete</li>-->
-  <li>
-    <nvd3-line-chart
-      data="chartData"
-      id="chart-{{meterId}}"
-      width="400"
-      height="200"
-      x="xFunction()"
-      y="yFunction()"
-      xAxisTickFormat="xAxisTickFormatFunction()"
-      yAxisTickFormat="yAxisTickFormatFunction()"
-      interactive="true"
-      showXAxis="true"
-      showYAxis="true">
-      <svg></svg>
-    </nvd3-line-chart>
-  </li>
-</ul>
+{{meter.name}} {{_calcValue}} <img src="{{subject.avatar_url}}" style="height:32px;width:32px;" data-ng-if="subject.avatar_url">{{subject.displayName}}
+<button ng-click="addDataPoint(1)" ng-show-auth="login">+1</button>
+<button ng-click="addDataPoint(-1)" ng-show-auth="login">-1</button>
+<nvd3-line-chart
+  data="chartData"
+  id="chart-{{meterId}}"
+  width="400"
+  height="200"
+  x="xFunction()"
+  y="yFunction()"
+  xAxisTickFormat="xAxisTickFormatFunction()"
+  yAxisTickFormat="yAxisTickFormatFunction()"
+  interactive="true"
+  showXAxis="true"
+  showYAxis="true">
+  <svg></svg>
+</nvd3-line-chart>
