@@ -12,11 +12,13 @@
 </div>
 
 
+<span ng-show-auth="login">
 <h3>Create a new meter</h3>
 <input type="text" placeholder="Meter Name" ng-model="newMeter.name" class="sa_input sa_medium">
 <div angucomplete placeholder="Search employees" selectedobject="selectedEmployee" searchfields="displayName,username" minlength="1" localdata="angucompleteUsers" titlefield="username" descriptionfield="displayName" imagefield="avatar_url" inputclass="sa_input sa_medium"></div>
 
 <button ng-click="createMeter()" class="sa_button sa_medium sa_blue">Create New Meter</button>
+</span>
 
 <!-- <p>Open <a href="{{FBURL}}/syncedValue">Forge</a> or a <a target="_blank" href="index.html">new window</a> to see this input update in real time:</p> -->
 
