@@ -13,7 +13,7 @@ angular.module('shiftagentMeters.config', [])
    // your Firebase URL goes here
    .constant('FBURL', 'https://shiftagent-meters.firebaseio.com')
 
-   .constant('allowedGithubUsers', ['mattrw89', 'jwkicklighter', 'airpez', 'cstowle']);
+   .constant('allowedGithubUsers', ['mattrw89', 'jwkicklighter', 'airpez', 'cstowle', 'sdm87']);
 
    //you can use this one to try out a demo of the seed
 //   .constant('FBURL', 'https://angularfire-seed.firebaseio.com');
